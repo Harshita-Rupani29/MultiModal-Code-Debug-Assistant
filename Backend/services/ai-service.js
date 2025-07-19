@@ -2,7 +2,7 @@
 require('dotenv').config();
 const fs = require('fs/promises'); 
 
-// --- LLM Client (Google AI Studio / Gemini API) - PRIMARY ---
+// --- LLM Client
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY);
 

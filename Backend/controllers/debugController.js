@@ -13,13 +13,6 @@ const {
 } = require("../services/ai-service");
 const fs = require('fs/promises');
 
-/**
- * Handles the analysis of a debug request, orchestrating multiple AI agents
- * and storing the results in the database.
- * @param {Object} req - The Express request object.
- * @param {Object} res - The Express response object.
- * @param {Function} next - The Express next middleware function.
- */
 const analyzeDebugRequest = async (req, res, next) => {
     const { code, errorLogs, language, title, description, additionalNotes } = req.body;
     const userId = req.userData.userId;

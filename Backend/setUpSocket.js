@@ -4,12 +4,6 @@ const jwt = require('jsonwebtoken');
 const DebugSession = require('./models/debugSession'); 
 const User = require('./models/user'); 
 
-/**
- 
- * @param {string} userId - The ID of the authenticated user.
- * @param {string} sessionId - The ID of the debug session to join.
- * @returns {Promise<boolean>} - True if the user can join, false otherwise.
- */
 const canUserJoinDebugSession = async (userId, sessionId) => {
     if (!userId) {
         return false;
